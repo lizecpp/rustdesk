@@ -863,18 +863,50 @@ class _SafetyState extends State<_Safety> with AutomaticKeepAliveClientMixin {
       }
       String initialKey;
       bool? fakeValue;
+      bool? fakeValue1;
+      bool? fakeValue2;
+      bool? fakeValue3;
+      bool? fakeValue4;
+      bool? fakeValue5;
+      bool? fakeValue6;
+      bool? fakeValue7;
+      bool? fakeValue8;
       switch (mode) {
         case _AccessMode.custom:
           initialKey = '';
           fakeValue = null;
+          fakeValue1 = false;
+          fakeValue2 = false;
+          fakeValue3 = false;
+          fakeValue4 = false;
+          fakeValue5 = false;
+          fakeValue6 = false;
+          fakeValue7 = false;
+          fakeValue8 = false;
           break;
         case _AccessMode.full:
-          initialKey = 'full';
+          initialKey = 'full'; 
           fakeValue = true;
+          fakeValue1 = true;
+          fakeValue2 = true;
+          fakeValue3 = true;
+          fakeValue4 = true;
+          fakeValue5 = true;
+          fakeValue6 = true;
+          fakeValue7 = true;
+          fakeValue8 = true;
           break;
         case _AccessMode.view:
           initialKey = 'view';
           fakeValue = false;
+          fakeValue1 = false;
+          fakeValue2 = false;
+          fakeValue3 = false;
+          fakeValue4 = false;
+          fakeValue5 = false;
+          fakeValue6 = false;
+          fakeValue7 = false;
+          fakeValue8 = false;
           break;
       }
 
@@ -902,28 +934,28 @@ class _SafetyState extends State<_Safety> with AutomaticKeepAliveClientMixin {
                 context, 'Enable keyboard/mouse', kOptionEnableKeyboard,
                 enabled: enabled, fakeValue: fakeValue),
             _OptionCheckBox(context, 'Enable clipboard', kOptionEnableClipboard,
-                enabled: enabled, fakeValue: fakeValue),
+                enabled: enabled, fakeValue: fakeValue1),
             _OptionCheckBox(
                 context, 'Enable file transfer', kOptionEnableFileTransfer,
-                enabled: enabled, fakeValue: fakeValue),
+                enabled: enabled, fakeValue: fakeValue2),
             _OptionCheckBox(context, 'Enable audio', kOptionEnableAudio,
-                enabled: enabled, fakeValue: fakeValue),
+                enabled: enabled, fakeValue: fakeValue3),
             _OptionCheckBox(
                 context, 'Enable TCP tunneling', kOptionEnableTunnel,
-                enabled: enabled, fakeValue: fakeValue),
+                enabled: enabled, fakeValue: fakeValue4),
             _OptionCheckBox(
                 context, 'Enable remote restart', kOptionEnableRemoteRestart,
-                enabled: enabled, fakeValue: fakeValue),
+                enabled: enabled, fakeValue: fakeValue5),
             _OptionCheckBox(
                 context, 'Enable recording session', kOptionEnableRecordSession,
-                enabled: enabled, fakeValue: fakeValue),
+                enabled: enabled, fakeValue: fakeValue6),
             if (isWindows)
               _OptionCheckBox(context, 'Enable blocking user input',
                   kOptionEnableBlockInput,
-                  enabled: enabled, fakeValue: fakeValue),
+                  enabled: enabled, fakeValue: fakeValue7),
             _OptionCheckBox(context, 'Enable remote configuration modification',
                 kOptionAllowRemoteConfigModification,
-                enabled: enabled, fakeValue: fakeValue),
+                enabled: enabled, fakeValue: fakeValue8),
           ],
         ),
       ]);
