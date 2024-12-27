@@ -916,18 +916,50 @@ class _SafetyState extends State<_Safety> with AutomaticKeepAliveClientMixin {
       }
       String initialKey;
       bool? fakeValue;
+      bool? fakeValue1;
+      bool? fakeValue2;
+      bool? fakeValue3;
+      bool? fakeValue4;
+      bool? fakeValue5;
+      bool? fakeValue6;
+      bool? fakeValue7;
+      bool? fakeValue8;
       switch (mode) {
         case _AccessMode.custom:
           initialKey = '';
-          fakeValue = null;
+          fakeValue = true;
+          fakeValue1 = false;
+          fakeValue2 = false;
+          fakeValue3 = false;
+          fakeValue4 = false;
+          fakeValue5 = false;
+          fakeValue6 = false;
+          fakeValue7 = false;
+          fakeValue8 = false;
           break;
         case _AccessMode.full:
           initialKey = 'full';
           fakeValue = true;
+          fakeValue1 = true;
+          fakeValue2 = true;
+          fakeValue3 = true;
+          fakeValue4 = true;
+          fakeValue5 = true;
+          fakeValue6 = true;
+          fakeValue7 = true;
+          fakeValue8 = true;
           break;
         case _AccessMode.view:
           initialKey = 'view';
           fakeValue = false;
+          fakeValue1 = false;
+          fakeValue2 = false;
+          fakeValue3 = false;
+          fakeValue4 = false;
+          fakeValue5 = false;
+          fakeValue6 = false;
+          fakeValue7 = false;
+          fakeValue8 = false;
           break;
       }
 
