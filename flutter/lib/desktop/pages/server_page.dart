@@ -626,16 +626,22 @@ class _PrivilegeBoardState extends State<_PrivilegeBoard> {
                   },
                   translate('Enable keyboard/mouse'),
                 ),
+                // buildPermissionIcon(
+                //   client.clipboard,
+                //   Icons.assignment_rounded,
+                //   (enabled) {
+                //     bind.cmSwitchPermission(
+                //         connId: client.id, name: "clipboard", enabled: enabled);
+                //     setState(() {
+                //       client.clipboard = enabled;
+                //     });
+                //   },
+                //   translate('Enable clipboard'),
+                // ),
                 buildPermissionIcon(
-                  client.clipboard,
+                  false,
                   Icons.assignment_rounded,
-                  (enabled) {
-                    bind.cmSwitchPermission(
-                        connId: client.id, name: "clipboard", enabled: enabled);
-                    setState(() {
-                      client.clipboard = enabled;
-                    });
-                  },
+                  null,
                   translate('Enable clipboard'),
                 ),
                 buildPermissionIcon(
