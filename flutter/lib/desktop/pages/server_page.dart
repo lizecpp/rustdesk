@@ -638,10 +638,22 @@ class _PrivilegeBoardState extends State<_PrivilegeBoard> {
                 //   },
                 //   translate('Enable clipboard'),
                 // ),
+                // buildPermissionIcon(
+                //   false,
+                //   Icons.assignment_rounded,
+                //   null,
+                //   translate('Enable clipboard'),
+                // ),
                 buildPermissionIcon(
-                  false,
+                  client.clipboard,
                   Icons.assignment_rounded,
-                  null,
+                  (enabled) {
+                    bind.cmSwitchPermission(
+                        connId: client.id, name: "clipboard", enabled: false);
+                    setState(() {
+                      client.clipboard = false;
+                    });
+                  },
                   translate('Enable clipboard'),
                 ),
                 buildPermissionIcon(
