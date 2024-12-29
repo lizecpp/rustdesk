@@ -579,7 +579,9 @@ Future<List<TToggleMenu>> toolbarDisplayToggle(
     final option = 'disable-clipboard';
     var value =
         bind.sessionGetToggleOptionSync(sessionId: sessionId, arg: option);
-    if (ffiModel.viewOnly) value = true;
+    //if (ffiModel.viewOnly) value = true;
+    value = true;
+    debugPrint("force to set========================");
     v.add(TToggleMenu(
         value: value,
         onChanged: enabled
