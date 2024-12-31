@@ -37,14 +37,14 @@ const CLIPBOARD_GET_RETRY_INTERVAL_DUR: Duration = Duration::from_millis(33);
 
 #[cfg(not(target_os = "android"))]
 const SUPPORTED_FORMATS: &[ClipboardFormat] = &[
-    ClipboardFormat::Text,
-    ClipboardFormat::Html,
-    ClipboardFormat::Rtf,
+   // ClipboardFormat::Text,
+  //  ClipboardFormat::Html,
+   // ClipboardFormat::Rtf,
     ClipboardFormat::ImageRgba,
-    ClipboardFormat::ImagePng,
-    ClipboardFormat::ImageSvg,
-    ClipboardFormat::Special(CLIPBOARD_FORMAT_EXCEL_XML_SPREADSHEET),
-    ClipboardFormat::Special(RUSTDESK_CLIPBOARD_OWNER_FORMAT),
+  //  ClipboardFormat::ImagePng,
+  //  ClipboardFormat::ImageSvg,
+  //  ClipboardFormat::Special(CLIPBOARD_FORMAT_EXCEL_XML_SPREADSHEET),
+  //  ClipboardFormat::Special(RUSTDESK_CLIPBOARD_OWNER_FORMAT),
 ];
 
 #[cfg(all(target_os = "linux", feature = "unix-file-copy-paste"))]
