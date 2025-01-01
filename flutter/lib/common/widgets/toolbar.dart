@@ -158,23 +158,23 @@ List<TTextMenu> toolbarControls(BuildContext context, String id, FFI ffi) {
   }
 
   // transferFile
-  if (isDesktop) {
-    v.add(
-      TTextMenu(
-          child: Text(translate('Transfer file')),
-          onPressed: () =>
-              connectWithToken(isFileTransfer: true, isTcpTunneling: false)),
-    );
-  }
+  // if (isDesktop) {
+  //   v.add(
+  //     TTextMenu(
+  //         child: Text(translate('Transfer file')),
+  //         onPressed: () =>
+  //             connectWithToken(isFileTransfer: true, isTcpTunneling: false)),
+  //   );
+  // }
   // tcpTunneling
-  if (isDesktop) {
-    v.add(
-      TTextMenu(
-          child: Text(translate('TCP tunneling')),
-          onPressed: () =>
-              connectWithToken(isFileTransfer: false, isTcpTunneling: true)),
-    );
-  }
+  // if (isDesktop) {
+  //   v.add(
+  //     TTextMenu(
+  //         child: Text(translate('TCP tunneling')),
+  //         onPressed: () =>
+  //             connectWithToken(isFileTransfer: false, isTcpTunneling: true)),
+  //   );
+  // }
   // note
   if (bind
       .sessionGetAuditServerSync(sessionId: sessionId, typ: "conn")
