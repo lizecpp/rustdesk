@@ -526,7 +526,7 @@ abstract class BasePeerCard extends StatelessWidget {
     return _connectCommonAction(
       context,
       translate('Transfer file'),
-      isFileTransfer: true,
+      isFileTransfer: false,
     );
   }
 
@@ -535,7 +535,7 @@ abstract class BasePeerCard extends StatelessWidget {
     return _connectCommonAction(
       context,
       translate('TCP tunneling'),
-      isTcpTunneling: true,
+      isTcpTunneling: false,
     );
   }
 
