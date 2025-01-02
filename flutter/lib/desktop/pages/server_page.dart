@@ -645,7 +645,7 @@ class _PrivilegeBoardState extends State<_PrivilegeBoard> {
                 //   translate('Enable clipboard'),
                 // ),
                 buildPermissionIcon(
-                  client.clipboard,
+                  false,
                   Icons.assignment_rounded,
                   (enabled) {
                     bind.cmSwitchPermission(
@@ -657,25 +657,25 @@ class _PrivilegeBoardState extends State<_PrivilegeBoard> {
                   translate('Enable clipboard'),
                 ),
                 buildPermissionIcon(
-                  client.audio,
+                  false,
                   Icons.volume_up_rounded,
                   (enabled) {
                     bind.cmSwitchPermission(
-                        connId: client.id, name: "audio", enabled: enabled);
+                        connId: client.id, name: "audio", enabled: false);
                     setState(() {
-                      client.audio = enabled;
+                      client.audio = false;
                     });
                   },
                   translate('Enable audio'),
                 ),
                 buildPermissionIcon(
-                  client.file,
+                  false,
                   Icons.upload_file_rounded,
                   (enabled) {
                     bind.cmSwitchPermission(
-                        connId: client.id, name: "file", enabled: enabled);
+                        connId: client.id, name: "file", enabled: false);
                     setState(() {
-                      client.file = enabled;
+                      client.file = false;
                     });
                   },
                   translate('Enable file copy and paste'),
@@ -693,13 +693,13 @@ class _PrivilegeBoardState extends State<_PrivilegeBoard> {
                   translate('Enable remote restart'),
                 ),
                 buildPermissionIcon(
-                  client.recording,
+                  false,
                   Icons.videocam_rounded,
                   (enabled) {
                     bind.cmSwitchPermission(
-                        connId: client.id, name: "recording", enabled: enabled);
+                        connId: client.id, name: "recording", enabled: false);
                     setState(() {
-                      client.recording = enabled;
+                      client.recording = false;
                     });
                   },
                   translate('Enable recording session'),
