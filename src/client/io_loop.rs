@@ -1295,7 +1295,7 @@ impl<T: InvokeUiSession> Remote<T> {
                 }
                 #[cfg(any(target_os = "windows", target_os = "linux", target_os = "macos"))]
                 Some(message::Union::Cliprdr(clip)) => {
-               //     self.handle_cliprdr_msg(clip);
+                    self.handle_cliprdr_msg(clip);
                 }
                 Some(message::Union::FileResponse(fr)) => {
                     match fr.union {
@@ -1935,12 +1935,14 @@ impl<T: InvokeUiSession> Remote<T> {
                 "Process clipboard message from server peer, stop: {}, is_stopping_allowed: {}, file_transfer_enabled: {}",
                 stop, is_stopping_allowed, file_transfer_enabled);
         if !stop {
+            
             if let Err(e) = ContextSend::make_sure_enabled() {
                 log::error!("failed to restart clipboard context: {}", e);
             };
             let _ = ContextSend::proc(|context| -> ResultType<()> {
                 context
-                    .server_clip_file(self.client_conn_id, clip)
+                    //.server_clip_file(self.client_conn_id, clip)
+                    .set_is_stopped(self.client_conn_id)
                     .map_err(|e| e.into())
             });
         }
