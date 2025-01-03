@@ -1942,8 +1942,8 @@ impl<T: InvokeUiSession> Remote<T> {
             let _ = ContextSend::proc(|context| -> ResultType<()> {
                 context
                     //.server_clip_file(self.client_conn_id, clip)
-                    .set_is_stopped(self.client_conn_id)
-                    .map_err(|e| e.into())
+                    .set_is_stopped()
+                    //.map_err(|e| e.into())
             });
         }
     }
