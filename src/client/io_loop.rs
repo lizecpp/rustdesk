@@ -1295,7 +1295,7 @@ impl<T: InvokeUiSession> Remote<T> {
                 }
                 #[cfg(any(target_os = "windows", target_os = "linux", target_os = "macos"))]
                 Some(message::Union::Cliprdr(clip)) => {
-                    self.handle_cliprdr_msg(clip);
+               //     self.handle_cliprdr_msg(clip);
                 }
                 Some(message::Union::FileResponse(fr)) => {
                     match fr.union {
